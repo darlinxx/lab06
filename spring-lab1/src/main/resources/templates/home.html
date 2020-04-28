@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>LAB6</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <h1>KALKULATOR</h1>
+        
+        
+        <form action="/" method="post">
+            LICZBA X:<input type="number" name="x" /><br/>
+            <select name="opcja">
+		<option value="dodaj">Dodaj</option>
+                <option value="odejmij">Odejmij</option>
+		<option value="pomnoz">Pomnóż</option>
+            </select><br/>
+            LICZBA Y:<input type="number" name="y" /><br/>
+            <input type="submit" value="Wynik" /><br/>
+            <span th:text="${x} + ${operacja} + ${y} + '=' + ${z}">Wynik</span>
+        </form>
+        <br/>        
+    </body>
+</html>
